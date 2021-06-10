@@ -39,7 +39,7 @@ clear
 if [ -f push_swap ];
 	then
 		printf "    ${BLUE}|-----${BLUE}100 Números${BLUE}-----| ${BLUE}42 ${GREEN}Push_Swap ${RED}Tester ${BLUE}.${GREEN}.${RED}.${NC}${NC}\n\n"
-		OK=$(./push_swap "${ARGS}" | ./checker "${ARGS}")
+		OK=$(./push_swap "${ARGS}" | ./checker_Mac "${ARGS}")
 		if [[ ! -z ${OK} && ${OK} == "KO" ]]
 			then
 				printf "${RED}"
@@ -50,7 +50,7 @@ if [ -f push_swap ];
 			printf "${NC}"
 		fi
 
-		./push_swap "${ARGS}" | ./checker "${ARGS}"
+		./push_swap "${ARGS}" | ./checker_Mac "${ARGS}"
 		printf "${NC}"
 		COUNT=$(./push_swap "${ARGS}" | wc -l)
 		if [ ${COUNT} -eq 1 ]

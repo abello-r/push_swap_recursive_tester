@@ -206,9 +206,9 @@ if [ -f push_swap ]
 		RES=$(./push_swap 2>&1 " " " " "1" "2" "3" "-1" | wc -l)
 		if [[ ${RES} -eq 1 ]]
 			then
-				printf "\t |\t${RED}TEST20 > KO      ${BLUE}|\n";
-			else
 				printf "\t |\t${GREEN}TEST20 > OK      ${BLUE}|\n";
+			else
+				printf "\t |\t${RED}TEST20 > KO      ${BLUE}|\n";
 		fi
 		######################TEST 21######################
 		sleep 0.2
@@ -218,15 +218,6 @@ if [ -f push_swap ]
 				printf "\t |\t${RED}TEST21 > KO      ${BLUE}|\n";
 			else
 				printf "\t |\t${GREEN}TEST21 > OK      ${BLUE}|\n";
-		fi
-		######################TEST 22######################
-		sleep 0.2
-		RES=$(./push_swap 2>&1 "asdklfj klsjfdkldj" | wc -l)
-		if [[ ${RES} -eq 1 ]]
-			then
-				printf "\t |\t${RED}TEST22 > KO      ${BLUE}|\n";
-			else
-				printf "\t |\t${GREEN}TEST22 > OK      ${BLUE}|\n";
 		fi
 		######################FINAL######################
 		printf "\t |                       |\n"
